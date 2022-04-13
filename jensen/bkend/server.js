@@ -34,6 +34,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/skolor', skolor);
+app.use('/api/users', require('../src/components/Users'))
 
 const PORT = process.env.PORT || 5000;
 
