@@ -1,20 +1,19 @@
 import React, { createContext, useReducer } from 'react';
-import AppReducer from './AppReducer';
+import Reducer from './Reducer';
 import axios from 'axios';
 
 // Initial state
 const initialState = {
   skolor: [],
-  error: null,
-  loading: true
+  error: null
 }
 
 // Create context
 export const GlobalContext = createContext(initialState);
 
 // Provider component
-export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+export const Provider = ({ children }) => {
+  const [state, dispatch] = useReducer(Reducer, initialState);
 
   // Actions
   async function getSkolor() {
@@ -74,7 +73,6 @@ export const GlobalProvider = ({ children }) => {
   return (<GlobalContext.Provider value={{
     skolor: state.skolor,
     error: state.error,
-    loading: state.loading,
     getSkolor,
     deleteSkola,
     addSkola

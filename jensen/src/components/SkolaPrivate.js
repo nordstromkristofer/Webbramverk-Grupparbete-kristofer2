@@ -1,13 +1,13 @@
 import React from 'react';
 import { SkolaList2 } from './SkolaList2';
 import { AddSkola } from './AddSkola';
-import { GlobalProvider } from "./context/GlobalState"
+import { Provider } from "./context/StateProvider"
 
 import './Kristofer.css'
 
 function SkolaPrivate() {
   return (
-    <GlobalProvider>
+    <Provider>
     
 
       <div className="container">
@@ -17,7 +17,7 @@ function SkolaPrivate() {
         <AddSkola />
         
       </div>
-    </GlobalProvider>
+    </Provider>
   );
 }
 

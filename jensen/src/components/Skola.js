@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { GlobalContext } from './context/GlobalState'
+import { GlobalContext } from './context/StateProvider'
 
 export const Skola = ({ skola }) => {
 
@@ -17,8 +17,6 @@ export const Skola = ({ skola }) => {
 
 export const SkolaInLog = ({ skola }) => {
   const { deleteSkola } = useContext(GlobalContext);
-
-
 
   return (
     <li className={skola.text}>

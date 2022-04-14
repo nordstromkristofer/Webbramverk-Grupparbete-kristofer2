@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Skola } from './Skola';
-import { GlobalContext } from './context/GlobalState';
+import { GlobalContext } from './context/StateProvider';
 
 
 export const SkolaList = () => {

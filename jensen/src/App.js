@@ -6,7 +6,7 @@ import Info from "./components/pages/Bomi/Info";
 import InfoB from "./components/pages/Bomi/InfoB";
 import Erik from "./components/pages/erik/Erik";
 
-
+// Kristofers routes
 import Kristofer from "./components/Kristofer";
 import Loggain from "./components/Loggain";
 import SkolaPrivate from "./components/SkolaPrivate";

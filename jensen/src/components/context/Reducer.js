@@ -3,7 +3,6 @@ export default (state, action) => {
     case 'GET_SKOLOR':
       return {
         ...state,
-        loading: false,
         skolor: action.payload
       }
     case 'DELETE_SKOLA':

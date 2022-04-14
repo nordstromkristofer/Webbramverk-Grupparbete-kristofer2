@@ -1,24 +1,28 @@
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Kristofer.css'
 
 function Loggain() {
-    // React States
+
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
     const navigate = useNavigate()
   
-    // User Login info
+   
+
+    // Hårdkodade användarnamn och lösenord här:
     const database = [
       {
         username: "Olof",
         password: "Olofsson"
       }
     ];
-  
+    
+
+    // Felmeddelanden
     const errors = {
-      uname: "invalid username",
-      pass: "invalid password"
+      uname: "Hittar inget med det namnet",
+      pass: "Fel lösen!"
     };
   
     const handleSubmit = (event) => {
@@ -30,27 +34,27 @@ function Loggain() {
       // Find user login info
       const userData = database.find((user) => user.username === uname.value);
   
-      // Compare user info
+      // Jämförande av användarinfo
       if (userData) {
         if (userData.password !== pass.value) {
-          // Invalid password
+         // Fel lösenord - meddelande
           setErrorMessages({ name: "pass", message: errors.pass });
         } else {
           setIsSubmitted(true);
         }
       } else {
-        // Username not found
+        // Användaren hittas inte-meddelande
         setErrorMessages({ name: "uname", message: errors.uname });
       }
     };
   
-    // Generate JSX code for error message
+    // JSX-kod för felmeddelande
     const renderErrorMessage = (name) =>
       name === errorMessages.name && (
         <div className="error">{errorMessages.message}</div>
       );
   
-    // JSX code for login form
+    //Loginformulär
     const renderForm = (
      
       <div className="form">
@@ -67,18 +71,15 @@ function Loggain() {
             {renderErrorMessage("pass")}
           </div>
           <br></br> <br></br> <br></br> <br></br>
-          <div className="button">
-            <input type="submit" />
-          </div>
+          <button className="btn">Logga in</button>
         </form>
       </div>
     );
   
     return (
-      <div className="app">
+      <div className="container">
               <br></br> <br></br> <br></br> <br></br>
         <div className="login-form">
-          <div className="title">Sign In</div>
           {isSubmitted ? navigate('/kristofer/admin') : renderForm}
         </div>
       </div>

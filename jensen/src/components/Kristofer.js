@@ -1,13 +1,13 @@
 import React from 'react';
 import { SkolaList } from '../components/SkolaList';
 import { AddSkola } from './AddSkola';
-import { GlobalProvider } from "../components/context/GlobalState"
+import { Provider } from "../components/context/StateProvider"
 
 import './Kristofer.css'
 
 function Kristofer() {
   return (
-    <GlobalProvider>
+    <Provider>
     
     <br></br><br></br><br></br>
       <div className="container">
@@ -17,7 +17,7 @@ function Kristofer() {
 
         
       </div>
-    </GlobalProvider>
+    </Provider>
   );
 }
 
