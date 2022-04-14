@@ -1,8 +1,6 @@
 const Skola = require('../models/SkolaModel');
 
-// @desc    Get all skolor
-// @route   GET /api/skolor
-// @access  Public
+//GET
 exports.getSkolor = async (req, res, next) => {
   try {
     const skolor = await Skola.find();
@@ -15,14 +13,12 @@ exports.getSkolor = async (req, res, next) => {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      error: 'Server Error'
+      error: 'Något tokigt med servern'
     });
   }
 }
 
-// @desc    Add Skola
-// @route   POST /api/skolor
-// @access  Public
+//ADD 
 exports.addSkola = async (req, res, next) => {
   try {
     const { text, teacha } = req.body;
@@ -50,9 +46,7 @@ exports.addSkola = async (req, res, next) => {
   }
 }
 
-// @desc    Delete Skola
-// @route   DELETE /api/skolor/:id
-// @access  Public
+//DELETE  
 exports.deleteSkola = async (req, res, next) => {
   try {
     const skola = await Skola.findById(req.params.id);
