@@ -7,10 +7,10 @@
     text-align: right;
     top: 0;
     font-size: 30px;
+    height:100px;
 }
 
 .logo {
-    float: left;
     display: inline-block;
     width: 60px;
     height: 60px;

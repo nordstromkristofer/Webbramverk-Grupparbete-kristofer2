@@ -2,13 +2,22 @@ const mongoose = require('mongoose');
 
 const SkolSchema = new mongoose.Schema({
   text: {
-    type: String,
-    trim: true,
-    required: [true, 'Please add some text']
+    type: String
   },
   teacha: {
-    type: String,
-    required: [true, 'Please add a lärare']
+    type: String
+  },
+  ort: {
+    type: String
+  },
+  utb1: {
+    type: String
+  },
+  utb2: {
+    type: String
+  },
+  utb3: {
+    type: String
   },
   createdAt: {
     type: Date,

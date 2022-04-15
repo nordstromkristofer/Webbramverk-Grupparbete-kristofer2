@@ -3,18 +3,23 @@ import { SkolaList2 } from './SkolaList2';
 import { AddSkola } from './AddSkola';
 import { Provider } from "./context/StateProvider"
 
-import './Kristofer.css'
+import './SkolaPrivate.css'
 
 function SkolaPrivate() {
   return (
     <Provider>
-    
-
-      <div className="container">
+      
+      <div className="ulog">
+      <a href ='/kristofer'>Logga ut</a>
+      </div>
+      <br></br><br></br><br></br>
+      <br></br><br></br><br></br>
+      <AddSkola />
+      <div className="container2">
         <br></br><br></br><br></br>
-        <a href ='/kristofer'>Logga ut</a>
+     
         <SkolaList2 />
-        <AddSkola />
+   
         
       </div>
     </Provider>

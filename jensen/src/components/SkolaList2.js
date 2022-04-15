@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { SkolaInLog } from './Skola';
-import { GlobalContext } from './context/StateProvider';
+import { Context } from './context/StateProvider';
 
 
 export const SkolaList2 = () => {
-  const { skolor, getSkolor } = useContext(GlobalContext);
+  const { skolor, getSkolor } = useContext(Context);
   
     useEffect(() => {
     getSkolor();
@@ -13,7 +13,6 @@ export const SkolaList2 = () => {
 
   return (
     <>
-      <h3>Skolor</h3>
       <ul className="list">
         {skolor.map(skola => (<SkolaInLog key={skola._id} skola={skola} />))}
       </ul>

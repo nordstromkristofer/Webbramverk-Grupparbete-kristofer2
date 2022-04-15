@@ -9,7 +9,7 @@ const initialState = {
 }
 
 // Create context
-export const GlobalContext = createContext(initialState);
+export const Context = createContext(initialState);
 
 // Provider component
 export const Provider = ({ children }) => {
@@ -70,7 +70,7 @@ export const Provider = ({ children }) => {
     }
   }
 
-  return (<GlobalContext.Provider value={{
+  return (<Context.Provider value={{
     skolor: state.skolor,
     error: state.error,
     getSkolor,
@@ -78,5 +78,5 @@ export const Provider = ({ children }) => {
     addSkola
   }}>
     {children}
-  </GlobalContext.Provider>);
+  </Context.Provider>);
 }

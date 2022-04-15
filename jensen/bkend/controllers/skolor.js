@@ -21,7 +21,7 @@ exports.getSkolor = async (req, res, next) => {
 //ADD 
 exports.addSkola = async (req, res, next) => {
   try {
-    const { text, teacha } = req.body;
+    const { text, teacha, ort, utb1, utb2, utb3 } = req.body;
 
     const skola = await Skola.create(req.body);
   
