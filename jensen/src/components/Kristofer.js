@@ -16,7 +16,7 @@ function Kristofer() {
       <div className="container">
         
 
-        <br></br><br></br><br></br>
+       
         
         <SkolaList />
       </div>

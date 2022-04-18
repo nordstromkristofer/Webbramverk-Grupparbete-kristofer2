@@ -15,18 +15,6 @@ export default (state, action) => {
         ...state,
         skolor: [...state.skolor, action.payload]
       }
-      case 'EDIT_SKOLA':
-        const updateSkola = action.payload
-
-        const updateSkolor = state.skolor.map(skola => {
-          if(skola.id === updateSkola.id) {
-            return updateSkola
-          }
-          return skola;
-        })
-        return {
-          skolor: updateSkolor
-        }
     case 'SKOLA_ERROR':
       return {
         ...state,

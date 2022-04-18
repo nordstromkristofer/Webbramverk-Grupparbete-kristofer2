@@ -4,10 +4,11 @@
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-h3{
+h3, .ulog{
   display:flex;
   justify-content: center;
   align-items: center;
+
 }
 
 
@@ -47,8 +48,19 @@ input {
   color: #fff;
   border: 0;
   display: block;
+  margin-top:43px;
   font-size: 16px;
-  margin: 10px 0 30px;
+  padding: 10px;
+}
+
+.addbtn {
+  cursor: pointer;
+  background-color: #7f8535;
+  color: #fff;
+  border: 0;
+  display: block;
+  margin-top:0px;
+  font-size: 16px;
   padding: 10px;
 }
 

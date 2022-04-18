@@ -8,12 +8,13 @@ import './SkolaPrivate.css'
 function SkolaPrivate() {
   return (
     <Provider>
-      
+   
+      <br></br><br></br><br></br>
+      <br></br><br></br><br></br>
       <div className="ulog">
       <a href ='/kristofer'>Logga ut</a>
+      <br></br><br></br><br></br>
       </div>
-      <br></br><br></br><br></br>
-      <br></br><br></br><br></br>
       <AddSkola />
       <div className="container2">
         <br></br><br></br><br></br>

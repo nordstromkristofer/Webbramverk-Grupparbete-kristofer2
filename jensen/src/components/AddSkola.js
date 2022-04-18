@@ -42,7 +42,7 @@ export const AddSkola = () => {
         <input type="text" value={utb1} onChange={(e) => setUtb1(e.target.value)} placeholder="Lägg till kurs här" />
         <input type="text" value={utb2} onChange={(e) => setUtb2(e.target.value)} placeholder="Lägg till kurs här" />
         <input type="text" value={utb3} onChange={(e) => setUtb3(e.target.value)} placeholder="Lägg till kurs här" />
-        <button className="btn">Lägg till</button>
+        <button className="addbtn">Lägg till</button>
       </form>
     </>
   )

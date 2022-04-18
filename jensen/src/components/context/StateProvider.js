@@ -15,7 +15,7 @@ export const Context = createContext(initialState);
 export const Provider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
-  // Actions
+ 
   async function getSkolor() {
     try {
       const res = await axios.get('/api/skolor');

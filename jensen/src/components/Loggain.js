@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
+import './LoggaIn.css'
+
 
 function Loggain() {
 
@@ -15,6 +17,10 @@ function Loggain() {
       {
         username: "Olof",
         password: "Olofsson"
+      },
+      {
+        username: "Reidar",
+        password: "Reidarsson"
       }
     ];
     
